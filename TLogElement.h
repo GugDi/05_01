@@ -31,5 +31,8 @@ class TAnd : public TLog2In{
 protected:
 	void calc();
 };
-class TOr : public TLog2In{};
+class TOr : public TLog2In{
+protected:
+	void calc();
+};
 #endif
