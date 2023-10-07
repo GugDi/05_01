@@ -12,7 +12,10 @@ void TLogElement::setIn1(bool newIn1){
 		case 2: FNextEl->setIn2(getRes()); break;
 		}
 }
-void TLogElement::setIn2(bool newIn2){}
+void TLogElement::setIn2(bool newIn2){
+	FNextEl = nextElement;
+	FNextIn = nextIn;
+}
 void TLogElement::Link(TLogElement* nextElement, int nextIn){}
 void TNot::calc(){}
 void TAnd::calc(){}
