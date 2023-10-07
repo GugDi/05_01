@@ -22,7 +22,11 @@ class TNot : public TLogElement{
 protected:
 	void calc();
 };
-class TLog2In : public TLogElement{};
+class TLog2In : public TLogElement{
+public:
+	using TLogElement::setIn2; //без "using" ругаются
+	using TLogElement::getIn2; //без "using" ругаются
+};
 class TAnd : public TLog2In{};
 class TOr : public TLog2In{};
 #endif
