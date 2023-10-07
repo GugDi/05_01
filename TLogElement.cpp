@@ -1,9 +1,9 @@
 #include "TLogElement.h"
-TLogElement::TLogElement(){
+TLogElement::TLogElement() {
 	//FNextEl = NULL;
 	FNextEl = 0;
 }
-void TLogElement::setIn1(bool newIn1){
+void TLogElement::setIn1(bool newIn1) {
 	FIn2 = newIn2;
 	calc();
 	if (FNextEl)
@@ -12,7 +12,7 @@ void TLogElement::setIn1(bool newIn1){
 		case 2: FNextEl->setIn2(getRes()); break;
 		}
 }
-void TLogElement::setIn2(bool newIn2){
+void TLogElement::setIn2(bool newIn2) {
 	FIn2 = newIn2;
 	calc();
 	if (FNextEl)
@@ -21,10 +21,16 @@ void TLogElement::setIn2(bool newIn2){
 		case 2: FNextEl->setIn2(getRes()); break;
 		}
 }
-void TLogElement::Link(TLogElement* nextElement, int nextIn){
+void TLogElement::Link(TLogElement* nextElement, int nextIn) {
 	FNextEl = nextElement;
 	FNextIn = nextIn;
 }
-void TNot::calc(){}
-void TAnd::calc(){}
-void TOr::calc(){}
+void TNot::calc() {
+	FRes = !getIn1();
+}
+void TAnd::calc() {
+	FRes = getIn1() && getIn2();
+}
+void TOr::calc() {
+	FRes = getIn1() || getIn2();
+}
