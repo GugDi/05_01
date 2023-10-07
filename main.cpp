@@ -18,4 +18,15 @@ int main() {
 	/**/  elAnd.setIn1(true);
 	/**/  elAnd.setIn2(true);
 	//для “примера из книжки” нужно вырезать то что тут (выше)
+	cout << " A B !(A&B)" << endl;
+	cout << "-------------" << endl;
+	for (A = 0; A <= 1; A++) {
+		elAnd.setIn1(A);
+		for (B = 0; B <= 1; B++) {
+			elAnd.setIn2(B);
+			elNot.setIn1(elAnd.getRes());
+			cout << " " << A << " " << B
+				<< " " << elNot.getRes() << endl;
+		}
+	}
 };
