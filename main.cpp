@@ -7,4 +7,15 @@ int main() {
 	TNot elNot;
 	TAnd elAnd;
 	int A, B;
+	//для “примера из книжки” нужно вырезать то что тут (ниже
+	/**/  elAnd.setIn1(true);
+	/**/  elAnd.setIn2(true);
+	/**/  cout << "elAnd.In1 = " << elAnd.getIn1() << endl;
+	/**/  cout << "elAnd.In2 = " << elAnd.getIn2() << endl;
+	/**/  cout << "elAnd.Res = " << elAnd.getRes() << endl;
+	/**/
+	/**/  elAnd.Link(&elNot);
+	/**/  elAnd.setIn1(true);
+	/**/  elAnd.setIn2(true);
+	//для “примера из книжки” нужно вырезать то что тут (выше)
 };
