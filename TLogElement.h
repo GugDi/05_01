@@ -1,5 +1,6 @@
 #ifndef TLOGELEMENT_H
 #define TLOGELEMENT_H
+
 class TLogElement{};
 class TNot : public TLogElement{};
 class TLog2In : public TLogElement{};
