@@ -4,7 +4,7 @@ TLogElement::TLogElement() {
 	FNextEl = 0;
 }
 void TLogElement::setIn1(bool newIn1) {
-	FIn2 = newIn2;
+	FIn2 = newIn1;
 	calc();
 	if (FNextEl)
 		switch (FNextIn) {
