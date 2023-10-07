@@ -18,7 +18,10 @@ public:
 	TLogElement();
 	void Link(TLogElement* nextElement, int nextIn = 1);
 };
-class TNot : public TLogElement{};
+class TNot : public TLogElement{
+protected:
+	void calc();
+};
 class TLog2In : public TLogElement{};
 class TAnd : public TLog2In{};
 class TOr : public TLog2In{};
