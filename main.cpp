@@ -2,7 +2,7 @@
 #include <iostream>
 #include <stdio.h>
 using namespace std;
-
+//Изменение
 int main() {
 	TNot elNot;
 	TAnd elAnd;
